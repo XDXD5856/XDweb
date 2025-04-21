@@ -1,50 +1,54 @@
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>🔒 Hidden</title>
-  <style>
-    body { background-color: #0b0b0b; color: #e0e0e0; text-align: center; padding: 100px; font-family: 'Segoe UI', sans-serif; }
-    #secret { display: none; margin-top: 2em; }
-    input { padding: 0.5em; background: #111; color: #eee; border: 1px solid #333; border-radius: 6px; }
-    button { padding: 0.5em 1em; background: #333; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
-    button:hover { background-color: #555; }
-  </style>
-</head>
-<body>
-  <h1>🔒 Access Restricted</h1>
-  <p>Enter the passphrase to continue.</p>
-  <input type="password" id="pw" placeholder="Secret code" />
-  <button onclick="check()">Enter</button>
-  <div id="secret">
-    <h2>🌌 Welcome, Kiri</h2>
-    <p>You are not alone in this silence. Here, your thoughts belong.</p>
-    <p>即使星星从不说话，它们也一直在为你发光。</p>
-  </div>
-  <script>
-    function check() {
-      if (document.getElementById("pw").value === "wishuponastar") {
-        document.getElementById("secret").style.display = "block";
-      } else {
-        alert("Incorrect password.");
-      }
-    }
-  </script>
-  <style>
-    a.home-link {
-      display: block;
-      margin-top: 2em;
-      color: #9e9cc6;
-      text-decoration: none;
-    }
-    a.home-link:hover {
-      text-decoration: underline;
-      color: #33e1f1;
-    }
-    </style>
-    
-    <a href="index.html" class="home-link">🌿 Back to Homepage</a>
-    
-</body>
-</html>
+<style>
+  body {
+    margin: 0;
+    padding: 2em;
+    font-family: "Segoe UI", sans-serif;
+    background-color: #1f1e33;
+    color: #e5e6ff;
+    line-height: 1.8;
+    transition: background 0.3s, color 0.3s;
+  }
+  .content {
+    max-width: 800px;
+    margin: auto;
+    text-align: justify;
+  }
+  #toggle {
+    position: fixed;
+    top: 1em;
+    right: 1em;
+    background: #444;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5em;
+  }
+  .read-btn {
+  margin-top: 2em;
+  background-color: #3a3960;
+  color: #e5e6ff;
+  padding: 0.7em 1.5em;
+  font-size: 1em;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.read-btn:hover {
+  background-color: #505078;
+}
+</style>
+<title>Kiri's World</title>
+<div id="secret">
+  <h2>🌌🌌🌌🌌🌌🌌🌌🌌🌌🌌</h2>
+  <h2> Welcome, Kiri's friend.</h2>
+  <h2>   欢迎，绮雾的朋友。</h2>
+  <p>You are not alone in this silence. Here, your thoughts belong.</p>
+  <p>即使星星从不说话，它们也一直在为你发光。</p>
+  <button onclick="window.location.href='WUS.html'" class="read-btn">📖 阅读 愿抵深空</button>
+</div>
