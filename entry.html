@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <title>进入《愿抵深空》</title>
+  <style>
+    body {
+      background-color: #1f1e33;
+      color: #e5e6ff;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 5em;
+    }
+    input, button {
+      font-size: 1em;
+      padding: 0.5em;
+      margin: 0.5em;
+      border-radius: 6px;
+      border: none;
+    }
+    button {
+      background-color: #444;
+      color: white;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #666;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔒 进入愿抵深空</h1>
+  <p>Password is needed：</p>
+  <input type="password" id="pw" placeholder="输入密码">
+  <button onclick="check()">进入</button>
+
+  <script>
+    function check() {
+      if (document.getElementById("pw").value === "wishuponasatellite") {
+        window.location.href = "WUS.html";
+      } else {
+        alert("密码错误！");
+      }
+    }
+  </script>
+</body>
+</html>
