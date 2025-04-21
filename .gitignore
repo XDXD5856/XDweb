@@ -1,0 +1,13 @@
+# 忽略上传工具脚本
+push.bat
+
+# 如果用 VSCode，可以加上这个
+.vscode/
+
+# 忽略系统生成文件
+.DS_Store
+Thumbs.db
+
+# 如果你用 Node.js 或 Python
+node_modules/
+__pycache__/
