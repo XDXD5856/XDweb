@@ -1,0 +1,14 @@
+
+# 忽略上传工具脚本
+push.bat
+
+# VSCode 设置
+.vscode/
+
+# 系统缓存
+.DS_Store
+Thumbs.db
+
+# Node.js / Python 缓存
+node_modules/
+__pycache__/

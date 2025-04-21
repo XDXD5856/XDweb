@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🔒 Hidden</title>
+  <style>
+    body { background-color: #0b0b0b; color: #e0e0e0; text-align: center; padding: 100px; font-family: 'Segoe UI', sans-serif; }
+    #secret { display: none; margin-top: 2em; }
+    input { padding: 0.5em; background: #111; color: #eee; border: 1px solid #333; border-radius: 6px; }
+    button { padding: 0.5em 1em; background: #333; color: #fff; border: none; border-radius: 6px; cursor: pointer; }
+    button:hover { background-color: #555; }
+  </style>
+</head>
+<body>
+  <h1>🔒 Access Restricted</h1>
+  <p>Enter the passphrase to continue.</p>
+  <input type="password" id="pw" placeholder="Secret code" />
+  <button onclick="check()">Enter</button>
+  <div id="secret">
+    <h2>🌌 Welcome, Kiri</h2>
+    <p>You are not alone in this silence. Here, your thoughts belong.</p>
+    <p>即使星星从不说话，它们也一直在为你发光。</p>
+  </div>
+  <script>
+    function check() {
+      if (document.getElementById("pw").value === "wishuponastar") {
+        document.getElementById("secret").style.display = "block";
+      } else {
+        alert("Incorrect password.");
+      }
+    }
+  </script>
+</body>
+</html>
