@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
   <meta charset="UTF-8">
-  <title>起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢</title>
+  <title>起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢起きて📢</title>
   <style>
     html, body {
       margin: 0;
@@ -19,31 +19,32 @@
   </style>
 </head>
 <body>
-  <video id="video" autoplay loop playsinline>
+  <video id="video" autoplay muted loop playsinline>
     <source src="videos/okite.MP4" type="video/mp4">
+    您的浏览器不支持 video 标签。
   </video>
 
   <script>
     const video = document.getElementById('video');
 
-    // 尝试请求全屏
+    // 自动播放后尝试全屏
+    video.play().then(() => {
+      requestFullscreen();
+    });
+
+    // 用户第一次点击：解除静音 + 播放 + 全屏
+    document.body.addEventListener('click', () => {
+      video.muted = false;
+      video.play();
+      requestFullscreen();
+    }, { once: true }); // 只触发一次
+
     function requestFullscreen() {
       const el = document.documentElement;
       if (el.requestFullscreen) el.requestFullscreen();
       else if (el.webkitRequestFullscreen) el.webkitRequestFullscreen();
       else if (el.msRequestFullscreen) el.msRequestFullscreen();
     }
-
-    // 尝试播放视频后请求全屏
-    video.play().then(() => {
-      requestFullscreen();
-    });
-
-    // 用户第一次点击可开启声音
-    video.addEventListener('click', () => {
-      video.muted = false;
-      video.play();
-    });
   </script>
 </body>
 </html>
